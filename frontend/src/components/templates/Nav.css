@@ -1,0 +1,45 @@
+.menu a{
+    font-size: 14px;
+    padding: 12px 15px;
+    font-weight: 400;
+    display: block;
+    text-decoration: none;
+    color:  #808080;
+}
+
+.menu a:hover {
+    background-color: #EAEAEA;
+}
+
+div.all-process > button {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    font-size: 14px;
+    font-weight: 600;
+    color:  #808080;
+}
+
+div.tag-title {
+    font-size: 12px;
+    padding: 12px 15px;
+    color: #808080;
+    font-weight: 700;
+}
+
+div.tag > button {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    font-size: 12px;
+    color: #808080;
+}
+
+.process{
+    font-weight: 600;
+    font-size: 12px;
+    color: #808080;
+    padding: 18px 0 0 14px;
+    background-color: white;
+    height: 48px;
+}

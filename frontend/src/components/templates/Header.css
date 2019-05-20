@@ -1,0 +1,20 @@
+.column-app {
+    float: left;
+    text-align: left;
+    padding: 12px 15px;
+    overflow: hidden;
+    white-space: nowrap;
+    font-weight: 500;
+    font-size:  18px;
+    color: white;
+}
+
+.column-icon {
+    float: right;
+    text-align: right;
+    padding: 12px 15px;
+    font-size: 30px;
+    color: white;
+}
+
+
