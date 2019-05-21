@@ -40,13 +40,9 @@ header.search {
 
 aside.menu-area{
         grid-area: menu;
-        background-color: white;
+        background-color: #F4F4F4;
 }
 
 main.content{
         grid-area: content;
-}
-
-footer.footer {
-        grid-area: footer; 
 }

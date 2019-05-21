@@ -53,23 +53,48 @@ export default class Home extends Component {
             return card.tag.includes(parseInt(this.state.selectedTag))
         })
 
+        // return filteredCards.map(c => {
+        //     return (
+        //         <div>
+        //             <Card className="card">
+        //                 <CardBody className="card-body">
+        //                     <CardTitle className="card-title">
+        //                         <i className="fa fa-plus-circle text-success" ></i> {c.partes.ativa.name}
+        //                         <i className="fa fa-minus-circle text-danger"></i> {c.partes.passiva.name}
+        //                     </CardTitle>
+        //                     <CardSubtitle className="card-subtitle">
+        //                         {c.classe} - {c.assunto}
+        //                     </CardSubtitle>
+        //                     <CardText className="card-text">
+        //                         {c.numero}
+        //                     </CardText>
+        //                 </CardBody>
+        //             </Card>
+        //         </div>
+        //     )
+        // })
+
         return filteredCards.map(c => {
             return (
-                <div>
-                    <Card className="card">
-                        <CardBody className="card-body">
-                            <CardTitle className="card-title">
-                                <i className="fa fa-plus-circle text-success" ></i> {c.partes.ativa.name}
-                                <i className="fa fa-minus-circle text-danger"></i> {c.partes.passiva.name}
-                            </CardTitle>
-                            <CardSubtitle className="card-subtitle">
+                <div className="pad">
+                    <section className="container flex">
+                        <div className="item flex-item-1">
+                            <i className="fa fa-plus-circle text-success"></i> {c.partes.ativa.name}
+                            <i className="fa fa-minus-circle text-danger"></i> {c.partes.passiva.name}
+                            <div className="">
                                 {c.classe} - {c.assunto}
-                            </CardSubtitle>
-                            <CardText className="card-text">
+                            </div>
+                            <div className="">
                                 {c.numero}
-                            </CardText>
-                        </CardBody>
-                    </Card>
+                            </div>
+                        </div>
+                        <div className="item flex-item-2">
+                            <i className="fa fa-bookmark"></i>
+                        </div>
+                        <div className="item flex-item-3">
+                            <i className="fa fa-folder-open"></i>
+                        </div>
+                    </section>
                 </div>
             )
         })

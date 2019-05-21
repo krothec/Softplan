@@ -30,7 +30,7 @@ export default class Nav extends Component {
             </div>
                     <div
                         className="all-process"
-                        style={{ backgroundColor: props.selectedTag === '' ? '#EAEAEA' : '#FFFFFF' }}
+                        style={{ backgroundColor: props.selectedTag === '' ? '#EAEAEA' : '#F4F4F4' }}
                     >
                         <Button
                             onClick={() => props.onSelectTag('')}
@@ -51,7 +51,7 @@ export default class Nav extends Component {
                         return (
                             <div
                                 className="tag"
-                                style={{ backgroundColor: props.selectedTag == tag.id ? '#EAEAEA' : '#FFFFFF' }}
+                                style={{ backgroundColor: props.selectedTag == tag.id ? '#EAEAEA' : '#F4F4F4' }}
                             >
                                 <Button
                                     onClick={() => props.onSelectTag(tag.id)}
@@ -63,15 +63,11 @@ export default class Nav extends Component {
                                     <span>
                                         {this.countCardsByTag(tag.id)}
                                     </span>
-
                                 </Button>
                             </div>
                         )
                     })}
                     <div className="tag-create">
-                        {/* <Link to="/users" className="link"> */}
-
-                        {/* Criar Etiqueta */}
                         <form onSubmit={(e) => {
                             e.preventDefault()
                             props.onCreateTag(this.state.tagName)
@@ -83,7 +79,6 @@ export default class Nav extends Component {
                                 value={this.state.tagName}
                                 onChange={this.handleChange} />
                         </form>
-                        {/* </Link> */}
                     </div>
                 </nav>
             </aside>

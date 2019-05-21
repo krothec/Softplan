@@ -11,7 +11,7 @@
     background-color: #EAEAEA;
 }
 
-div.all-process > button {
+.all-process > button {
     display: flex;
     justify-content: space-between;
     width: 100%;
@@ -20,19 +20,19 @@ div.all-process > button {
     color:  #808080;
 }
 
-div.tag-title {
+.tag-title {
     font-size: 12px;
     padding: 12px 15px;
     color: #808080;
     font-weight: 700;
 }
 
-div.tag > button {
+.tag > button {
     display: flex;
     justify-content: space-between;
     width: 100%;
-    font-size: 12px;
     color: #808080;
+    padding-left: 30px;
 }
 
 .process{
@@ -40,6 +40,6 @@ div.tag > button {
     font-size: 12px;
     color: #808080;
     padding: 18px 0 0 14px;
-    background-color: white;
+    background-color: #F4F4F4;
     height: 48px;
 }
