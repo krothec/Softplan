@@ -1,6 +1,5 @@
 import './Nav.css'
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
 import { Button } from 'reactstrap';
 
 export default class Nav extends Component {
@@ -64,7 +63,6 @@ export default class Nav extends Component {
                                         {this.countCardsByTag(tag.id)}
                                     </span>
                                 </Button>
-                                <div> div para teste</div>
                             </div>
                         )
                     })}
