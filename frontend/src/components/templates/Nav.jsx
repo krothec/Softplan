@@ -26,7 +26,7 @@ export default class Nav extends Component {
                 <nav className="menu">
                     <div className="process">
                         Processos
-            </div>
+                    </div>
                     <div
                         className="all-process"
                         style={{ backgroundColor: props.selectedTag === '' ? '#EAEAEA' : '#F4F4F4' }}
@@ -45,27 +45,28 @@ export default class Nav extends Component {
                     </div>
                     <div className="tag-title">
                         Etiquetas
-            </div>
-                    {props.tags.map(tag => {
-                        return (
-                            <div
-                                className="tag"
-                                style={{ backgroundColor: props.selectedTag == tag.id ? '#EAEAEA' : '#F4F4F4' }}
-                            >
-                                <Button
-                                    onClick={() => props.onSelectTag(tag.id)}
-                                    color="link"
-                                >
-                                    <span>
-                                        {tag.name}
-                                    </span>
-                                    <span>
-                                        {this.countCardsByTag(tag.id)}
-                                    </span>
-                                </Button>
-                            </div>
-                        )
-                    })}
+                    </div>
+                        {props.tags.map(tag => {
+                            return (
+                                <div
+                                    key = {tag.id}
+                                    className="pad tag"
+                                    style = {{ backgroundColor: props.selectedTag === tag.id ? '#EAEAEA' : '#F4F4F4'}}>
+                                    <Button
+                                        onClick={() => props.onSelectTag(tag.id)}
+                                        color="link"> 
+                                        <span>
+                                            <b><i className="fa fa-minus"
+                                                style={{ color: tag.background }} /></b> 
+                                                {tag.name}
+                                        </span>
+                                        <span>
+                                            {this.countCardsByTag(tag.id)}
+                                        </span>                                     
+                                    </Button>
+                                </div>
+                            )
+                        })}
                     <div className="tag-create">
                         <form onSubmit={(e) => {
                             e.preventDefault()

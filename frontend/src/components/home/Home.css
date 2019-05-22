@@ -42,15 +42,19 @@
     color: #4D4D4D;
 }
 
-.name{
+.name-left{
         margin-right: 5px;
         padding-top: 3px;
         padding-left: -2px;
 }
 
-.name2{
+.name-right{
         margin-right: 3px;
         margin-left:  10px;
         padding-top: 3px;
         padding-left: -2px;
+}
+
+.icon-folder{
+    padding-top: 30px;
 }

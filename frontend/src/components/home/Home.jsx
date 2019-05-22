@@ -35,7 +35,7 @@ export default class Home extends Component {
         return (tagId) => {
 
             const modifiedCards = this.state.cards.map((card) => {
-                if (card.id == cardId) {
+                if (card.id === cardId) {
                     return {
                         ...card,
                         tag: [...card.tag, tagId]
@@ -48,36 +48,8 @@ export default class Home extends Component {
             this.setState({
                 cards: modifiedCards
             })
-
-
-
-
-
-
-
-            // const cardIndex = this.state.cards.findIndex((card) => {
-            //     return card.id == cardId
-            // })
-            // const card = this.state.cards[cardIndex]
-            // const modifiedCard = {
-            //     ...card,
-            //     tag: [...card.tag, tagId]
-            // };
-
-            // const arrStart = this.state.cards.slice(0, cardIndex)
-
-            // const arrEnd = this.state.cards.slice(cardIndex + 1, this.state.cards.length)
-
-            // this.setState({
-            //     cards: [
-            //         ...arrStart,
-            //         modifiedCard,
-            //         ...arrEnd,
-            //     ]
-            // })
         }
     }
-
 
     createTag = (name) => {
         this.setState({
@@ -89,7 +61,6 @@ export default class Home extends Component {
                     color: "#FFF",
                     background: "#49bdce"
                 }
-
             ]
         })
     }
@@ -107,10 +78,10 @@ export default class Home extends Component {
                     <div className="row">
                         <div className="column left col-md-6">
                             <div className="row">
-                                <i className="fa fa-plus-circle text-success name"></i> {card.partes.ativa.name}
-                                <i className="fa fa-minus-circle text-danger name2"></i> {card.partes.passiva.name}
+                                <i className="name-left fa fa-plus-circle text-success"></i> {card.partes.ativa.name}
+                                <i className="name-right fa fa-minus-circle text-danger"></i> {card.partes.passiva.name}
                             </div>
-                            <div className="row subject">
+                            <div className="row">
                                 {card.classe} - <b className="subject"> {card.assunto}</b>
                             </div>
                             <div className="row">
@@ -122,24 +93,30 @@ export default class Home extends Component {
 
                         </div>
                         <div className="column right col-md-3">
-                            <PopOver
-                                tags={this.state.tags}
-                                selectedTag={this.state.selectedTag}
-                                onSelectTag={this.selectTag}
-                                onSetTag={this.setTag(card.id)}
-                            // (tag) => {}
-                            />
-                            <div>
-                                {card.tag.map(tagId => {
-                                    const tag = this.state.tags.find((tag) => {
-                                        return tag.id == tagId
-                                    })
-                                    return (
-                                        <span key={tagId} style={{ backgroundColor: tag.background, color: tag.color }}>
-                                            {tag.name}
-                                        </span>
-                                    )
-                                })}
+                            <div className="row">
+                                <div>
+                                    <PopOver
+                                        tags={this.state.tags}
+                                        onSetTag={this.setTag(card.id)}
+                                    />
+                                </div>
+                                <div>
+                                    {card.tag.map(tagId => {
+                                        const tag = this.state.tags.find((tag) => {
+                                            return tag.id == tagId
+                                        })
+                                        return (
+                                            <p>
+                                                <span
+                                                    key={tagId}
+                                                    style={{ backgroundColor: tag.background, color: tag.color }}
+                                                >
+                                                    {tag.name}
+                                                </span>
+                                            </p>
+                                        )
+                                    })}
+                                </div>
                             </div>
                         </div>
                     </div>

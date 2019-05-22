@@ -7,10 +7,6 @@
     color:  #808080;
 }
 
-.menu a:hover {
-    background-color: #EAEAEA;
-}
-
 .all-process > button {
     display: flex;
     justify-content: space-between;
@@ -32,7 +28,7 @@
     justify-content: space-between;
     width: 100%;
     color: #808080;
-    padding-left: 30px;
+    padding-left: 15px;
 }
 
 .process{
@@ -42,4 +38,15 @@
     padding: 18px 0 0 14px;
     background-color: #F4F4F4;
     height: 48px;
+}
+
+.tag-create{
+    padding: 10px;
+}
+
+input {
+    background-color: #F4F4F4;
+    border-top-width: 0px;
+    border-bottom-width: 0px;
+    border-left-width: 0px;    
 }
